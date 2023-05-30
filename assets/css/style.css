@@ -222,3 +222,78 @@ footer nav ul {
 	padding: 2em;
 	background: white;
 }
+
+/* Login Page Style */
+
+#login-main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 60vh;
+}
+
+.login-form {
+	display: grid;
+	justify-items: center;
+	width: 60%;
+	gap: 37px;
+}
+
+.form-content {
+	display: grid;
+	width: 45%;
+	height: 200px;
+	gap: 30px;
+}
+
+.mail-container, .password-container {
+	display: grid;
+	gap: 7px;
+}
+
+.input, .input:focus-visible {
+	text-align: center;
+	height: 51px;
+	border: 1px solid transparent;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+	outline: none;
+}
+
+.form-submit {
+	display: grid;
+	justify-items: center;
+}
+
+.form-submit > input[type="submit"] {
+	padding: 10px 39px;
+}
+
+#login-footer {
+	margin-top: 44vh;
+}
+
+/* Erreur */
+
+.error, .error-fetch, .error-login {
+	display: block;
+	width: 100%;
+	color: red;
+	text-align: center;
+}
+
+.error {
+	font-size: 0.7rem;
+}
+
+.error-fetch {
+	font-size: 1.5rem;
+}
+
+.error-login {
+	height: 30px;
+	font-size: 1rem;
+}
+
+.input.error-input {
+	border: 1px red solid;
+}
