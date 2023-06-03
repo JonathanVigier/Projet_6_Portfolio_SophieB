@@ -3,8 +3,6 @@ export const navigationLinks = document.querySelectorAll(
   "header > nav > ul > li"
 );
 
-console.log(navigationLinks);
-
 export function goToHomePage() {
   window.location.href = "./index.html";
 }

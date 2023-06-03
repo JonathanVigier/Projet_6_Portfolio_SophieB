@@ -53,6 +53,64 @@
 		</form>
 	</section>
 </main>
+<aside class="modifier-modal" aria-hidden="true" role="note" aria-labelledby="modal-title">
+	<div class="modifier-modal-wrapper">
+		<div class="close-modifier-modal">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+		    </svg>
+		</div>
+		<h3 id="modal-title">Galerie Photo</h3>
+		<div class="gallery modal-gallery"></div>
+		<div class="modal-line-separation"></div>
+		<a id="add-image-button">Ajouter une photo</a>
+		<a id="modal-delete-button">Supprimer la galerie</a>
+	</div>
+</aside>
+<aside class="add-image-modal" aria-hidden="true" role="note" aria-labelledby="image-modal-title">
+	<div class="add-image-modal-wrapper">
+		<div id="arrow-back">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+			</svg> 
+		</div>
+		<div class="close-add-image-modal">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+				<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+		    </svg>
+		</div>
+		<h3 id="image-modal-title">Ajout Photo</h3>
+		<form class="add-image-form">
+			<div class="add-image-container">
+				<div class="picture-icon">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="#B9C5CC" class="w-6 h-6">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+					</svg>
+				</div>
+				<label for="add-image-input" class="add-image-label">+ Ajouter photo</label>
+				<input type="file" id="add-image-input" accept="image/jpeg, image/png" name="image">
+				<p class="authorized-files-text">jpg, png : 4mo max</p>
+			</div>
+			<div class="image-title-container">
+				<label for="image-title" class="image-title-and-category">Titre</label>
+				<input type="text" id="image-title" name="title" autocomplete="off">
+				<span></span>
+			</div>
+			<div class="image-category-container">
+				<label for="image-category" class="image-title-and-category">Catégorie</label>
+				<select id="image-category" name="category">
+					<option value="0">Choississez une catégorie</option>
+					<option value="1">Objet</option>
+					<option value="2">Appartement</option>
+					<option value="3">Hôtels et restaurants</option>
+				</select>
+				<span></span>
+			</div>
+			<div class="modal-line-separation"></div>
+			<input type="submit" id="valid-button" value="Valider">
+		</form>
+	</div>
+</aside>
 <footer>
 	<nav>
 		<ul>

@@ -9,9 +9,11 @@ import { galleries } from "./works_display.js";
 
 const portfolio = document.getElementById("portfolio");
 
+// Instanciation des containers de boutons de filtres
 export const filtersContainer = document.createElement("div");
 export const filtersContent = document.createElement("ul");
 
+// Affichage et mise en style des containers de bouton de filtres
 if (portfolio) {
   portfolio.insertBefore(filtersContainer, galleries[0]);
 }
