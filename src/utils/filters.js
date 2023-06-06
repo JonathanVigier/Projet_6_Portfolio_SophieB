@@ -5,34 +5,37 @@ import { workDisplay } from "../pages/works_display.js";
 let worksFiltered = [];
 let filterMethod = "Tous";
 
-export function resetFilter() {
-  filters[0].addEventListener("click", (e) => {
-    filterMethod = e.target.textContent;
-    worksFiltered = works;
-    workDisplay(worksFiltered);
-  });
-}
-
-export function objectFilter() {
-  filters[1].addEventListener("click", (e) => {
-    filterMethod = e.target.textContent;
-    worksFiltered = works.filter((work) => work.category.name === filterMethod);
-    workDisplay(worksFiltered);
-  });
-}
-
-export function appartmentFilter() {
-  filters[2].addEventListener("click", (e) => {
-    filterMethod = e.target.textContent;
-    worksFiltered = works.filter((work) => work.category.name === filterMethod);
-    workDisplay(worksFiltered);
-  });
-}
-
-export function resortsFilter() {
-  filters[3].addEventListener("click", (e) => {
-    filterMethod = e.target.textContent;
-    worksFiltered = works.filter((work) => work.category.name === filterMethod);
-    workDisplay(worksFiltered);
-  });
+export function filterWorks() {
+  for (let i = 0; i < filters.length; i++) {
+    filters[i].addEventListener("click", (e) => {
+      switch (i) {
+        case 0:
+          filterMethod = e.target.textContent;
+          worksFiltered = works;
+          workDisplay(worksFiltered);
+          break;
+        case 1:
+          filterMethod = e.target.textContent;
+          worksFiltered = works.filter(
+            (work) => work.category.name === filterMethod
+          );
+          workDisplay(worksFiltered);
+          break;
+        case 2:
+          filterMethod = e.target.textContent;
+          worksFiltered = works.filter(
+            (work) => work.category.name === filterMethod
+          );
+          workDisplay(worksFiltered);
+          break;
+        case 3:
+          filterMethod = e.target.textContent;
+          worksFiltered = works.filter(
+            (work) => work.category.name === filterMethod
+          );
+          workDisplay(worksFiltered);
+          break;
+      }
+    });
+  }
 }

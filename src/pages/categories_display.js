@@ -1,9 +1,4 @@
-import {
-  resetFilter,
-  objectFilter,
-  appartmentFilter,
-  resortsFilter,
-} from "../utils/filters.js";
+import { filterWorks } from "../utils/filters.js";
 import { newCategories } from "../api/categories_services.js";
 import { galleries } from "./works_display.js";
 
@@ -32,8 +27,10 @@ export function categoryDisplay() {
     .join("");
   filters = filtersContent.querySelectorAll("li");
 
-  resetFilter();
-  objectFilter();
-  appartmentFilter();
-  resortsFilter();
+  // resetFilter();
+  // objectFilter();
+  // appartmentFilter();
+  // resortsFilter();
+
+  filterWorks();
 }
